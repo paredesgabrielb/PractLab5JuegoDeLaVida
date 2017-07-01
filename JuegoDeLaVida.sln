@@ -1,18 +1,47 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JuegoDeLaVida", "JuegoDeLaVida\JuegoDeLaVida.csproj", "{88C4520C-A70B-4AC4-838C-040BEFDEBB64}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JuegoDeLaVida.Core", "JuegoDeLaVida\JuegoDeLaVida.Core.csproj", "{88C4520C-A70B-4AC4-838C-040BEFDEBB64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JuegoDeLaVida.Web", "JuegoDeLaVida.Web\JuegoDeLaVida.Web.csproj", "{4C9D9616-D7E5-433E-816E-CD0F24E370D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JuegoDeLaVida.Consola", "JuegoDeLaVida.Console\JuegoDeLaVida.Consola.csproj", "{307C6E2B-7C08-42A8-B7BE-8ECF3FF109DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88C4520C-A70B-4AC4-838C-040BEFDEBB64}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{88C4520C-A70B-4AC4-838C-040BEFDEBB64}.Debug|x86.ActiveCfg = Debug|x86
 		{88C4520C-A70B-4AC4-838C-040BEFDEBB64}.Debug|x86.Build.0 = Debug|x86
+		{88C4520C-A70B-4AC4-838C-040BEFDEBB64}.Release|Any CPU.ActiveCfg = Release|x86
 		{88C4520C-A70B-4AC4-838C-040BEFDEBB64}.Release|x86.ActiveCfg = Release|x86
 		{88C4520C-A70B-4AC4-838C-040BEFDEBB64}.Release|x86.Build.0 = Release|x86
+		{4C9D9616-D7E5-433E-816E-CD0F24E370D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C9D9616-D7E5-433E-816E-CD0F24E370D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C9D9616-D7E5-433E-816E-CD0F24E370D7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4C9D9616-D7E5-433E-816E-CD0F24E370D7}.Debug|x86.Build.0 = Debug|Any CPU
+		{4C9D9616-D7E5-433E-816E-CD0F24E370D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C9D9616-D7E5-433E-816E-CD0F24E370D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C9D9616-D7E5-433E-816E-CD0F24E370D7}.Release|x86.ActiveCfg = Release|Any CPU
+		{4C9D9616-D7E5-433E-816E-CD0F24E370D7}.Release|x86.Build.0 = Release|Any CPU
+		{307C6E2B-7C08-42A8-B7BE-8ECF3FF109DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{307C6E2B-7C08-42A8-B7BE-8ECF3FF109DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{307C6E2B-7C08-42A8-B7BE-8ECF3FF109DC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{307C6E2B-7C08-42A8-B7BE-8ECF3FF109DC}.Debug|x86.Build.0 = Debug|Any CPU
+		{307C6E2B-7C08-42A8-B7BE-8ECF3FF109DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{307C6E2B-7C08-42A8-B7BE-8ECF3FF109DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{307C6E2B-7C08-42A8-B7BE-8ECF3FF109DC}.Release|x86.ActiveCfg = Release|Any CPU
+		{307C6E2B-7C08-42A8-B7BE-8ECF3FF109DC}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = JuegoDeLaVida\JuegoDeLaVida.csproj

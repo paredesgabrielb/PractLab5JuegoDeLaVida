@@ -2,38 +2,43 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace JuegoDeLaVida
+namespace JuegoDeLaVida.Core
 {
     public class Juego
     {
-        public Generacion[] Generaciones { get; set; }
+        public List<Generacion> Generaciones { get; set; }
         public Generacion GeneracionActual { get; set; }
         public Generacion GeneracionAnterior { get; set; }
         public int SizeX { get; set; }
         public int SizeY { get; set; }
 
         // Constructor
-        public Juego(int sizeX, int sizeY, bool isRandom = true)
+        public Juego(int sizeX, int sizeY, bool isRandom = true, Generacion generacion = null)
         {
             SizeX = sizeX;
             SizeY = sizeY;
-            if (isRandom)
+            Generaciones = new List<Generacion>();
+            if (isRandom && generacion == null)
             {
                 GeneracionActual = GenerarGeneracionRandom();
-                Generaciones[0] = GeneracionActual;
             }
+            else
+            {
+                GeneracionActual = generacion;
+            }
+            Generaciones.Add(GeneracionActual);
         }
 
         public void AvanzarGeneracion()
         {
             GeneracionAnterior = GeneracionActual;
             GeneracionActual = GeneracionActual.GetNextGeneracion();
-            Generaciones[Generaciones.Length] = GeneracionActual ;
+            Generaciones.Add(GeneracionActual);
         }
         public void RetrocederGeneracion()
-        {
+        { //TODO: cuando el anterior no exista, no peude ir para atras
             GeneracionActual = GeneracionAnterior;
-            GeneracionAnterior = Generaciones[GeneracionAnterior.Id-1];
+            GeneracionAnterior = Generaciones.FirstOrDefault(x=>x.Id == GeneracionActual.Id-1);
         }
         public Generacion GenerarGeneracionRandom()
         {
@@ -41,7 +46,8 @@ namespace JuegoDeLaVida
             var _matrix = Enumerable.Range(1, SizeX * SizeY)
                 .Select((x) => random.NextDouble() < 0.20)
                 .ToArray();
-            return new Generacion(Generaciones.Length,_matrix, SizeX, SizeY);
+            var result = new Generacion(Generaciones != null ? Generaciones.Count : 0 , _matrix, SizeX, SizeY);
+            return result;
         }
 
         // Metodos Estaticos

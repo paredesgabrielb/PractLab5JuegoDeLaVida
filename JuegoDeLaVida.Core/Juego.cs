@@ -33,12 +33,14 @@ namespace JuegoDeLaVida.Core
         {
             GeneracionAnterior = GeneracionActual;
             GeneracionActual = GeneracionActual.GetNextGeneracion();
+            //GeneracionActual = GetNextGeneracion(GeneracionActual);
             Generaciones.Add(GeneracionActual);
         }
         public void RetrocederGeneracion()
-        { //TODO: cuando el anterior no exista, no peude ir para atras
-            GeneracionActual = GeneracionAnterior;
-            GeneracionAnterior = Generaciones.FirstOrDefault(x=>x.Id == GeneracionActual.Id-1);
+        {
+            GeneracionActual = GeneracionAnterior != null ? GeneracionAnterior : GeneracionActual;
+            var _generacionAnterior = Generaciones.FirstOrDefault(x => x.Id == GeneracionActual.Id - 1);
+            GeneracionAnterior = _generacionAnterior != null ? _generacionAnterior : null;
         }
         public Generacion GenerarGeneracionRandom()
         {

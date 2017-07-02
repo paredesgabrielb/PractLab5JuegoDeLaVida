@@ -7,13 +7,12 @@ namespace JuegoDeLaVida.Consola
     {
         public static void Print(Generacion generacion)
         {
-            for (int x = 0; x < generacion.SizeX; x++)
+            for (int y = 0; y < generacion.SizeY; y++) 
             {
-                for (int y = 0; y < generacion.SizeY; y++)
-                    Console.Write("|{0}", generacion.GetValor(x, y) ? "X" : " ");
+                for (int x = 0; x < generacion.SizeX; x++)
+                    Console.Write("|{0}", generacion.GetValor(x, y) ? "x" : " ");
                 Console.WriteLine("|");
             }
         }
     }
 }
-

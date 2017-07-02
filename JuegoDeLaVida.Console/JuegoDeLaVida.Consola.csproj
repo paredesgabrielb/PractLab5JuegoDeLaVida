@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{307C6E2B-7C08-42A8-B7BE-8ECF3FF109DC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>JuegoDeLaVida.Console</RootNamespace>
-    <AssemblyName>JuegoDeLaVida.Console</AssemblyName>
+    <RootNamespace>JuegoDeLaVida.Consola</RootNamespace>
+    <AssemblyName>JuegoDeLaVida.Consola</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="JuegoDeLaVida.Core">
+      <HintPath>..\JuegoDeLaVida.Core\bin\Debug\netstandard1.4\JuegoDeLaVida.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,17 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsolePrinter.cs" />
+    <Compile Include="JuegoExtensionConsola.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\JuegoDeLaVida\JuegoDeLaVida.Core.csproj">
-      <Project>{88c4520c-a70b-4ac4-838c-040befdebb64}</Project>
-      <Name>JuegoDeLaVida.Core</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

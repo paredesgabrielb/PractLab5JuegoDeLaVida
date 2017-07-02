@@ -25,7 +25,7 @@ namespace JuegoDeLaVida.Core
         {
             return Matrix[x + y * SizeX];
         }
-
+        
         public Generacion GetNextGeneracion()
         {
             var _matrix = (
